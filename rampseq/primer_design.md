@@ -156,16 +156,11 @@ cat $OutDir/cascade_000000F_kmer_pairs.tsv | grep '159_3798_40.0-909_3912_35.0' 
 
 $ProgDir/locate_kmers.py --assembly $OutDir/000000F.fa --kmers $OutDir/${Prefix}_filtered.fa --prefix $OutDir/${Strain}_2
 
-# bwa index $Assembly
-#
-# bwa mem -M -t 12 $Assembly $Kmers | samtools view -S -b - > $OutDir/"$Prefix".bam
-#
-# ### Add group and sample name (Prefix)
-# bamaddrg -b "$Prefix".bam -s $Prefix -r $Prefix > "$Prefix"_unsorted.bam
-# ### Sort the full BAM file.
-# samtools sort -@ 12  "$Prefix"_unsorted.bam -o "$Prefix"_sorted.bam
-#
-# #index
-# samtools index "$Prefix"_sorted.bam
+
+cat $OutDir/cascade_000000F_kmer_pairs.tsv | cut -f1 | sort | uniq -c | sort -nr | head
+
+cat $OutDir/cascade_000000F_kmer_pairs.tsv | grep '52241_2216_65.0-69655_2605_65.0' | cut -f1,7 | sed "s/^/>/g" | sed "s/\t/\n/g" | less
+
+cat $OutDir/cascade_000000F_kmer_pairs.tsv | grep '31385_7521_35.0-38330_9906_40.0' | cut -f1,7 | sed "s/^/>/g" | sed "s/\t/\n/g" | less
 
 ```
