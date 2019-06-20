@@ -379,12 +379,12 @@ cat $OutDir/${Pair}_000000F_seqs.fa | grep -v '>' | sort | uniq | wc -l
 
 ```
   Number of unique sequences:
-  7902
+  9852
 
   Present this many time in contig 000000F
-  22
+  31
   unique this many times
-  21
+  30
 ```
 
 If this locus has ~10000 amplicons and a MiSeq can generate up to 25million reads
@@ -451,5 +451,85 @@ for Pair in $PairList; do
   echo "unique this many times"
   cat $OutDir/${Pair}_000000F_seqs.fa | grep -v '>' | sort | uniq | wc -l
 done 2>&1 | tee rampseq/primer_design/locations/H.lupulus/cascade/dilution_series.log
+```
+
+```
+38160_9772_55.0-8781_9023_45.0
+Number of unique sequences:
+9512
+Present this many time in contig 000000F
+31
+unique this many times
+30
+11084_7253_50.0-29195_9975_50.0
+Number of unique sequences:
+9186
+Present this many time in contig 000000F
+29
+unique this many times
+28
+11542_6815_60.0-66601_8144_50.0
+Number of unique sequences:
+7713
+Present this many time in contig 000000F
+25
+unique this many times
+24
+18830_7612_35.0-46424_8016_45.0
+Number of unique sequences:
+7471
+Present this many time in contig 000000F
+30
+unique this many times
+27
+19792_9624_40.0-66531_8440_50.0
+Number of unique sequences:
+5622
+Present this many time in contig 000000F
+4
+unique this many times
+3
+49606_5159_50.0-51657_5401_60.0
+Number of unique sequences:
+3854
+Present this many time in contig 000000F
+4
+unique this many times
+3
+29653_4614_35.0-32407_5921_40.0
+Number of unique sequences:
+3494
+Present this many time in contig 000000F
+12
+unique this many times
+10
+33811_5191_55.0-60554_5192_50.0
+Number of unique sequences:
+3873
+Present this many time in contig 000000F
+4
+unique this many times
+3
+22316_1076_50.0-51537_1225_65.0
+Number of unique sequences:
+783
+Present this many time in contig 000000F
+1
+unique this many times
+1
+29920_1362_50.0-9670_2397_40.0
+Number of unique sequences:
+991
+Present this many time in contig 000000F
+1
+unique this many times
+1
+36243_2910_35.0-53007_4683_40.0
+Number of unique sequences:
+742
+Present this many time in contig 000000F
+1
+unique this many times
+1
 
 ```
