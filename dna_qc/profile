@@ -1,0 +1,10 @@
+nano ~/.profile
+#edited with:
+## set PATH and other variables so it includes user's local settings
+#if [ -f "$HOME/.profile2" ] ; then
+#    . "$HOME/.profile2"
+#fi
+## Prepend exectutable locations to PATH
+#PATH=$HOME/gitrepos/prog/fastqc/FastQC:${PATH}
+
+. ~/.profile
